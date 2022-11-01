@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #212327;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interfazfinallat.HelloController">
+   <children>
+      <TextArea fx:id="areaTxtEntrada" layoutX="23.0" layoutY="47.0" prefHeight="271.0" prefWidth="272.0" style="-fx-control-inner-background: #292a2f; " />
+      <TextArea fx:id="areaTxtSalida" layoutX="23.0" layoutY="355.0" prefHeight="120.0" prefWidth="602.0" style="-fx-control-inner-background:#292a2f;" />
+      <TextArea fx:id="areaTxtTraduccion" layoutX="353.0" layoutY="47.0" prefHeight="271.0" prefWidth="272.0" style="-fx-control-inner-background:#292a2f; " />
+      <MenuBar fx:id="botones" prefHeight="26.0" prefWidth="900.0" style="-fx-background-color: #343333;">
+        <menus>
+          <Menu fx:id="btnAcciones" mnemonicParsing="false" text="Acciones">
+            <items>
+              <MenuItem fx:id="btnEjecutar2" mnemonicParsing="false" onAction="#enviarTexto" text="Ejecutar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                <MenuItem fx:id="btnArchivo" mnemonicParsing="false" onAction="#subirTexto" text="Archivo">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="A" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="btnCerrar" mnemonicParsing="false" onAction="#cerrar" text="Cerrar">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu fx:id="btnTrac" mnemonicParsing="false" text="Traducir">
+            <items>
+              <MenuItem fx:id="btnTraducirCaL" mnemonicParsing="false" onAction="#traducir" text="C a mi idioma">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="T" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem fx:id="btnTraducirLaC" mnemonicParsing="false" onAction="#traducir2" text="Mi idioma  a C" />
+            </items>
+          </Menu>
+          <Menu fx:id="btnClr" mnemonicParsing="false" text="Limpiar">
+            <items>
+              <MenuItem fx:id="btnClrIzq" mnemonicParsing="false" onAction="#limpiar1" text="Izquierda" />
+               <MenuItem fx:id="btnClrDer" mnemonicParsing="false" onAction="#limpiar2" text="Derecha" />
+               <MenuItem fx:id="btnClrEj" mnemonicParsing="false" onAction="#limpiar3" text="Ejecucion" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="btnCLrTodo" mnemonicParsing="false" onAction="#limpiar4" text="Todo">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="B" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
