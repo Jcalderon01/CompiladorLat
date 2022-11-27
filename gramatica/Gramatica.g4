@@ -1,7 +1,7 @@
 grammar Gramatica;
 
 major   : caput aperta corpus claudure  EOF  ;
-caput   : INANIS MAJOR '(' ')'            ;
+caput   : INANIS MAJOR '(' ')'            #cabeza;
 aperta  : '{'                             ;
 claudure: '}'                             ;
 
@@ -35,12 +35,14 @@ cond:
       FALSE                                                                   #confictus
       |
       '('cond')'                                                              #parcon
+      |
+      ID                                                                      #idcon
       ;
 
 condsi: 'if' '(' cond ')' '{' corpus '}' conelseif* conelse?                  #conditiosi;
 conelse  : 'else' '{' corpus '}'                                              #condicionels;
 conelseif: 'else' 'if' '(' cond ')' '{' corpus '}'                            #condicionelseif;
-confor: FOR'(' (delarareasignare||assignment) cond ';' ID op = ('++'|'--') ')' '{' corpus '}'  #condiconfor;
+confor: FOR'(' (delarareasignare||assignment) cond ';' incremento ')' '{' corpus '}'  #condiconfor;
 
 expr:
     expr POTENTIA  NUM                               #potentia      //potencia
@@ -55,6 +57,9 @@ expr:
     |
     ID                                               #nomen         //ids
     ;
+
+incremento:
+    ID '++';
 
 FOR         :   'for';
 AND         :    '&&';
@@ -80,10 +85,10 @@ PLUS        : '+'                               ;                   //
 MINUS       : '-'                               ;                   //
 DIVISIO     : '/'                               ;                   //
 BY          : '*'                               ;                   //
-IDEM        : '='                               ;                   //
+IDEM        : '='                               ;                   // numeros
+NUM         : [0-9]+                            ;                   //
 TRSITE      : [0-9]+('.'[0-9]+)?                ;                   // floats
 ID          : [a-zA-Z]+                         ;                   //ids
-NUM         : [0-9]+                            ;                   //numeros
 COMMENT     : '/*'~[\r\n]* '\r'? '\n' -> skip   ;                   //comentarios
 COM         : '//' ~[\r\n]*  ->skip;
 AS          : [ \t\r\n]-> skip                      ;               //
