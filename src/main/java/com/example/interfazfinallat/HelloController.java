@@ -14,8 +14,7 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.antlr.v4.runtime.tree.ParseTree;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 import java.util.zip.InflaterInputStream;
 
@@ -111,7 +110,30 @@ public class HelloController {
             MyVisitor visitas = new MyVisitor();
             visitas.visit(arbol);
 
-            areaTxtSalida.setText(texto);
+            //crear archivo
+            File miarchivo = new File("src\\archivo.j");
+            FileWriter miarchivo2 = new FileWriter(miarchivo.getAbsolutePath());
+            System.out.println(texto);
+            miarchivo2.write(texto);
+            miarchivo2.write("return\n.end method");
+            miarchivo2.close();
+           // areaTxtSalida.setText(texto);
+
+            Process crear = Runtime.getRuntime().exec(" java -jar jasmin.jar archivo.j",null, new File("src\\")
+            );
+            crear.waitFor();
+            Process impresion =Runtime.getRuntime().exec("java Hola",null, new File("src\\")
+            );
+            BufferedReader salida = new BufferedReader(new InputStreamReader(impresion.getInputStream()));
+            String line;
+            while ((line= salida.readLine())!=null){
+                areaTxtSalida.appendText(line+ "\n");
+            }
+            salida.close();
+            crear.destroy();
+            impresion.destroy();
+
+
             texto = "";
         }
         catch (Exception e){
