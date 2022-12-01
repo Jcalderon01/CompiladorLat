@@ -17,7 +17,7 @@
 
 ### Introduccion 
 
-Un  compilador  es  un  programa  que  traduce  codigo  escrito  en  un  lenguaje  a  otro  lenguaje.  En  este  tipo  de traductor el lenguaje fuente es generalmente un lenguaje de alto nivel y el objeto un lenguaje de bajo nivel, como el codigo maaquina. Este proceso de traduccion se conoce como compilacion.
+Un  compilador  es  un  programa  que  traduce  codigo  escrito  en  un  lenguaje  a  otro  lenguaje.  En  este  tipo  de traductor el lenguaje fuente es generalmente un lenguaje de alto nivel y el objeto un lenguaje de bajo nivel, como el codigo maquina. Este proceso de traduccion se conoce como compilacion.
 En  este  documento  se  presentan  los  pasos  seguidos  para  crear  un  compilador  basico  el  cual  traduce  de  el lenguaje c a mi lenguaje creado y compila las instrucciones.
 
 ---
@@ -31,37 +31,37 @@ En  este  documento  se  presentan  los  pasos  seguidos  para  crear  un  compi
 Figura 1: Disenño
 
 
-2.-Lo primero que hice fue hacer las nuevas reglas que iba a necesitar. Dichas reglas sirven para poder identificar cuando el usuario quiera asignar, declarar o imprimir. Estas son muy b´asicas y parecidas entre si.
+2.-Lo primero que hice fue hacer las nuevas reglas que iba a necesitar. Dichas reglas sirven para poder identificar cuando el usuario quiera asignar, declarar o imprimir. Estas son muy basicas y parecidas entre si.
 ![image](https://user-images.githubusercontent.com/104863690/204939350-4aba9a05-aa9d-4b60-b15a-8d9e4610b14e.png)
 
 Figura 2: Gramatica de los metodos
 
 
-3.-Para  la  visita  de  declaraci´on,  lo  que  use  fue  una  variable  llamada  memoria  de  tipo  mapa,  en  la  cual  se almacenara el nombre de las variables que se est´en declarando.
+3.-Para  la  visita  de  declaracion,  lo  que  use  fue  una  variable  llamada  memoria  de  tipo  mapa,  en  la  cual  se almacenara el nombre de las variables que se esten declarando.
 Esta cuenta con un if para comprobar si un nombre de variable ya fue utilizado y siendo este el caso, imprimir´a un mensaje ”La variable ya esta declarara”. Si no, simplemente la agregara a la memoria.
 
 
 ![image](https://user-images.githubusercontent.com/104863690/204939504-b988678e-8e8f-4464-af43-97c43cff0818.png)
 
-Figura 3: C´odigo de la visita de declaraci´on
+Figura 3: Codigo de la visita de declaracion
 
-4.-Para  la  asignaci´on,  el  m´etodo  usado  es  pr´acticamente  el  mismo  con  la  diferencia  de  que  en  este  si  se considera lo que contiene la variable.
+4.-Para  la  asignacion,  el  m´etodo  usado  es  practicamente  el  mismo  con  la  diferencia  de  que  en  este  si  se considera lo que contiene la variable.
 
 
 ![image](https://user-images.githubusercontent.com/104863690/204939557-55831df3-4d62-4e1a-88ff-70fe3fdc3236.png)
 
 
-Figura 4: C´odigo de la visita de asignaci´on 
+Figura 4: Codigo de la visita de asignacion 
 
 
-5.-La impresi´on fue la mas f´acil de las 3, simplemente se imprime.
+5.-La impresion fue la mas facil de las 3, simplemente se imprime.
 
 ![image](https://user-images.githubusercontent.com/104863690/204939813-e932699d-a5bf-4c5c-a169-8ed700fdfe20.png)
 
-Figura 5: C´odigo de la visita de impresi´on
+Figura 5: Codigo de la visita de impresion
 
 
-6.-Para la traducci´on se necesito una gram´atica nueva, al igual que una nueva clase MyVisitor. A continuaci´on se muestra un poco de la gram´atica.
+6.-Para la traduccion se necesito una gramatica nueva, al igual que una nueva clase MyVisitor. A continuacion se muestra un poco de la gramatica.
 
 ![image](https://user-images.githubusercontent.com/104863690/204939845-e8fc1eae-692c-41bd-a387-52e886250929.png)
 Figura 6: Gram´atica para traducci´on
@@ -79,13 +79,13 @@ Figura 7: Algunos ejemplos de como sirve la traducci´on
 
 ![image](https://user-images.githubusercontent.com/104863690/204939892-7b520af3-a44b-4354-96c8-208ff7edc514.png)
 
-Figura 8: Ejemplo declaraci´on, asignaci´on, impresi´on y traducci´on
+Figura 8: Ejemplo declaracion, asignacion, impresion y traduccion
 
-8.- Fue necesaria la utilizaci´on de un m´etodo para subir archivos de texto y que este los lea.
+8.- Fue necesaria la utilizacion de un metodo para subir archivos de texto y que este los lea.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940137-3aabbb3f-ae4c-4c44-ad20-7cad202b20dd.png)
 
-Figura 9: M´etodo para subir archivos
+Figura 9: Metodo para subir archivos
 
 
 
@@ -94,20 +94,20 @@ Figura 9: M´etodo para subir archivos
 Figura 10: Ejemplo de ventana de archivos
 
 
-9.- Actualizaci´on de disen˜o y funciones.
+9.- Actualizacion de diseno y funciones.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940207-4ba329af-4c07-431e-ab7d-d5ae10f46e00.png)
 
 Figura 11: Nuevo cascaron
 
 
-10.- Implementaci´on de el m´etodo if.
+10.- Implementacion de el metodo if.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940251-4561c5b6-0088-472b-a2ee-fd8e22d8fdca.png)
 
-Figura 12: Gram´atica del if
+Figura 12: Gramatica del if
 
-11.- La forma en que sirve la visita es preguntado si existe una condici´on, siendo el caso de que si, este hace lo que se encuentre dentro del cuerpo.
+11.- La forma en que sirve la visita es preguntado si existe una condicion, siendo el caso de que si, este hace lo que se encuentre dentro del cuerpo.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940276-2ad22a33-a112-4856-b083-4a8aa7ed7ad6.png)
 
@@ -117,11 +117,11 @@ Figura 13: Visita al if
 
 Figura 14: Ejemplo if
 
-12.- Implementaci´on del m´etodo else.
+12.- Implementacion del m´etodo else.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940338-afa3e7f4-313e-49df-b8e5-8e16ec1b6cb2.png)
 
-Figura 15: Gram´atica else
+Figura 15: Gramatica else
 13.- En caso de que haya un else, su visita simplemente llama al cuerpo. Para esto, fue necesario actualizar la visita al if.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940368-a7637b0e-ad95-4eb5-80f9-0513f15f225b.png)
@@ -134,7 +134,7 @@ Figura 17: Ejemplo else
 
 
 
-14.- Se pregunta si el else es diferente de nulo, siendo el caso, se visita este mismo .
+14.- Se pregunta si el else es diferente de nulo, siendo el caso, se visita este mismo.
 ![image](https://user-images.githubusercontent.com/104863690/204940429-0f13fb36-92d0-45f8-86be-51f3bff2c43b.png)
 
 Figura 18: Visita if nueva
@@ -144,43 +144,43 @@ Figura 18: Visita if nueva
 15.- Gramatica else if.
 ![image](https://user-images.githubusercontent.com/104863690/204940756-d144ded2-1ac3-4e13-a57b-cca3259a7464.png)
 
-Figura 19: Gram´atica else if
+Figura 19: Gramatica else if
 
 16.- Igual que con el else, para el else if la visita no es muy complicada, siendo el caso de que exista, solo se visita el cuerpo.
 ![image](https://user-images.githubusercontent.com/104863690/204940782-a1f770dd-4f99-4933-a728-7d5dfe672330.png)
 
-Figura 20: Gram´atica else if
+Figura 20: Gramatica else if
 
 
 17.-De nuevo se actualiza la visita del if en el caso de que exista un else if, Lo que hace primero es preguntar si la visita al else if es diferente de nula, si si, se usa un ciclo para visitarlo las veces que sea necesario en caso de que haya mas de uno.
 ![image](https://user-images.githubusercontent.com/104863690/204940809-91e70b8c-f568-410b-af02-09f1299447c0.png)
 
-Figura 21: Segunda actualizaci´on al if
+Figura 21: Segunda actualizacion al if
 
 ![image](https://user-images.githubusercontent.com/104863690/204940835-52e8aedb-7bdf-4cde-8b72-2997ed2955f6.png)
 
 Figura 22: Ejemplo else if
 
-18.- Para el for, igual que en todo lo dem´as se creo una nueva regla basada en la estructura de este.
+18.- Para el for, igual que en todo lo demas se creo una nueva regla basada en la estructura de este.
 ![image](https://user-images.githubusercontent.com/104863690/204940862-9892adb0-dda7-4368-95c9-735f2220e6dd.png)
 
-Figura 23: Gram´atica for
+Figura 23: Gramatica for
 
 
-19.- La visita del forma es la mas larga y complicada hasta el momento, principalmente porque consiste de dos  partes  las  cuales  son  id´enticas  con  la  u´nica  diferencia  de  que  una  se  usa  para  declarar  variables  dentro  del for.
+19.- La visita del forma es la mas larga y complicada hasta el momento, principalmente porque consiste de dos  partes  las  cuales  son  id´enticas  con  la  unica  diferencia  de  que  una  se  usa  para  declarar  variables  dentro  del for.
 Lo primero que se hace es preguntar cual de estas dos condiciones es, digamos que es en la que viene la asignaci´on. El primer if es para el caso en el que el for incrementa. En el for las visitas se acomodan de la misma manera en la que ir´ıan en un for, primero se coloca ya sea la declaraci´on o la declaraci´on-asignaci´on, despu´es se coloca la condici´on, para finalizar con el incremento.
 El else es igual y sirve para el caso de que sea decremento.
 
 ![image](https://user-images.githubusercontent.com/104863690/204940923-b00840b2-ff5d-4cb8-be4b-69beb4d549ed.png)
 
-Figura 24: Gram´atica for
+Figura 24: Gramatica for
 
 ![image](https://user-images.githubusercontent.com/104863690/204940982-0bb8cf81-f96b-42fa-aeb7-934c42848f25.png)
 
 Figura 25: Ejemplo for
 
 
-20-. Para la implementaci´on del and y or, lo primero fue agregarlos como tokens a la gram´atica.
+20-. Para la implementacion del and y or, lo primero fue agregarlos como tokens a la gramatica.
 
 ![image](https://user-images.githubusercontent.com/104863690/204941030-c28084b8-7b28-490e-a521-0995d1317183.png)
 
@@ -194,27 +194,27 @@ Figura 26: Tokens and y or
 Figura 27: Tokens en condicion
 
 
-22-. En la visita, lo que hace es crear dos variables, izq y der a las cuales se les da el valor de la primer y la segunda condici´on. Seguido viene un if el cual compara el texto de la operaci´on con un ””, su es igual hace que las variables regresen con un ”&&”, y si son diferentes regresan con un ”∥∥”.
+22-. En la visita, lo que hace es crear dos variables, izq y der a las cuales se les da el valor de la primer y la segunda condicion. Seguido viene un if el cual compara el texto de la operaci´on con un ””, su es igual hace que las variables regresen con un ”&&”, y si son diferentes regresan con un ”∥∥”.
 
 ![image](https://user-images.githubusercontent.com/104863690/204941172-df1d70ff-135d-4e4a-9188-6254fa42862a.png)
 
-Figura 28: Tokens en condici´on
+Figura 28: Tokens en condicion
 
 ![image](https://user-images.githubusercontent.com/104863690/204941184-76df3bbc-6f7c-475f-9a06-7b7586e132ef.png)
 
 Figura 29: Ejemplo and
 
 
-23.- Creaci´on del scope. El componente con mas paso y mas complicado hasta el momento.
-Para empezar, fue necesario la creaci´on de una clase nueva, la cual llame ”scope”. Esta clase consiste de varios m´etodos,  agregar,  asignar,  buscar  y  regresar.  Estas  de  manera  simple  funcionan  comparando  2  cosas  entre  si, el mapa llamado variables, y la variable de tipos scope llamada padre. En cada nivel que se baja, los datos se pasan de una a la otra comprobando que estos no se repitan, siendo el caso de que si, salta la excepci´on.
-A continuaci´on se presenta uno el m´etodo asignar usado en el scope.
+23.- Creacion del scope. El componente con mas paso y mas complicado hasta el momento.
+Para empezar, fue necesario la creacion de una clase nueva, la cual llame ”scope”. Esta clase consiste de varios metodos,  agregar,  asignar,  buscar  y  regresar.  Estas  de  manera  simple  funcionan  comparando  2  cosas  entre  si, el mapa llamado variables, y la variable de tipos scope llamada padre. En cada nivel que se baja, los datos se pasan de una a la otra comprobando que estos no se repitan, siendo el caso de que si, salta la excepcion.
+A continuaci´on se presenta uno el metodo asignar usado en el scope.
 ![image](https://user-images.githubusercontent.com/104863690/204941213-3d3d7a4c-f0cf-417f-814f-6db8779d98ef.png)
 
 Figura 30: Metodo asignar en scope
 
 
-Este metodo comienza preguntado si el mapa de variables contiene algo dentro, siendo el caso de que si estas ser´an  remplazadas.  Si  no,  dar´a  el  error  de  que  la  variable  no  existe.  En  el  caso  del  else  if,  entra  a  este  si  la variable padre se encuentra vac´ıa y le coloca las variables, este ultima parte funciona de manera recursiva.
-24.-El siguiente punto importante es la clase de verificar. Lo u´nico que hace esta es leer el c´odigo para saber si la forma es la que esta escrito tiene sentido. La forma en la que funciona es muy parecida al visitor original con la diferencia de que este no modifica nada. Los puntos en los que cambio son los siguientes.
+Este metodo comienza preguntado si el mapa de variables contiene algo dentro, siendo el caso de que si estas seran  remplazadas.  Si  no,  dara  el  error  de  que  la  variable  no  existe.  En  el  caso  del  else  if,  entra  a  este  si  la variable padre se encuentra vacıa y le coloca las variables, este ultima parte funciona de manera recursiva.
+24.-El siguiente punto importante es la clase de verificar. Lo unico que hace esta es leer el codigo para saber si la forma es la que esta escrito tiene sentido. La forma en la que funciona es muy parecida al visitor original con la diferencia de que este no modifica nada. Los puntos en los que cambio son los siguientes.
 
 ![image](https://user-images.githubusercontent.com/104863690/204941261-065fc50e-2ff0-41ff-b38e-e1244708ef9d.png)
 
@@ -484,7 +484,7 @@ Para suma y resta.
         }
     }
 ```
-Para divicion y multiplicacion.
+Para division y multiplicacion.
 ```Java
  @Override public Double visitBydivisio(GramaticaParser.BydivisioContext ctx)
     {
