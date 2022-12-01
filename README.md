@@ -1,15 +1,15 @@
 # Traductor y compilador Jasmin
 
 
-[1)Introduccion](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#introduccion)
+[1) Introduccion](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#introduccion)
 
-[2)Desarrollo](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#desarrollo)
+[2) Desarrollo](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#desarrollo)
 
-[3)Introduccion Jasmin](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#introduccion-jasmin)
+[3) Introduccion Jasmin](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#introduccion-jasmin)
 
-[4)Desarrollo Jasmin](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#desarrollo-1)
+[4) Desarrollo Jasmin](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#desarrollo-1)
 
-[5)Conclusion](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#conclusion)
+[5) Conclusion](https://github.com/Jcalderon01/CompiladorLat/edit/main/README.md#conclusion)
 
 
 
