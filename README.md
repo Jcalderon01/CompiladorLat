@@ -19,6 +19,7 @@
 
 Un  compilador  es  un  programa  que  traduce  codigo  escrito  en  un  lenguaje  a  otro  lenguaje.  En  este  tipo  de traductor el lenguaje fuente es generalmente un lenguaje de alto nivel y el objeto un lenguaje de bajo nivel, como el codigo maaquina. Este proceso de traduccion se conoce como compilacion.
 En  este  documento  se  presentan  los  pasos  seguidos  para  crear  un  compilador  basico  el  cual  traduce  de  el lenguaje c a mi lenguaje creado y compila las instrucciones.
+
 ---
 ### Desarrollo
 1.-La  base  de  todo  el  compilador  es  el  diseño,  y  es  con  este  con  el  que  comence.  Este  cuenta  con  3  campos  de texto, uno para el codigo en C, otro para el c´odigo en mi idioma, y el ultimo para el resultado de la compilacion. Al igual que con varios botones de varias funciones.
